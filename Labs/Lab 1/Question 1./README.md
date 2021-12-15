@@ -1,4 +1,4 @@
-*CONSTRUCTORS
+***CONSTRUCTORS**
 -> Constructor is a block of code that initializes the newly created object. A constructor resembles an instance method in java but it’s not a method as it doesn’t have a return type. In short constructor and method are different(More on this at the end of this guide). People often refer constructor as special type of method in Java.
 
 Constructor has same name as the class and looks like this in a java code.
@@ -11,15 +11,15 @@ public class MyClass{
 }
 Note that the constructor name matches with the class name and it doesn’t have a return type.
 
-How does a constructor work
-To understand the working of constructor, lets take an example. lets say we have a class MyClass.
+**How does a constructor work**
+-> To understand the working of constructor, lets take an example. lets say we have a class MyClass.
 When we create the object of MyClass like this:
 
 MyClass obj = new MyClass()
 The new keyword here creates the object of class MyClass and invokes the constructor to initialize this newly created object.
 
 
-*Types of Constructors
+***Types of Constructors**
 -> There are three types of constructors: Default, No-arg constructor and Parameterized.
 
 1.Default constructor
@@ -31,16 +31,19 @@ Constructor with no arguments is known as no-arg constructor. The signature is s
 Although you may see some people claim that that default and no-arg constructor is same but in fact they are not, even if you write public Demo() { } in your class Demo it cannot be called default constructor since you have written the code of it.
 
 Example: no-arg constructor
+
 class Demo
 {
      public Demo()
      {
          System.out.println("This is a no argument constructor");
      }
-     public static void main(String args[]) {
+     public static void main(String args[]) 
+     {
     	 new Demo();
      }
 }
+
 Output:
 This is a no argument constructor
 
@@ -51,27 +54,29 @@ This is a no argument constructor
 Example: parameterized constructor
 In this example we have a parameterized constructor with two parameters id and name. While creating the objects obj1 and obj2 I have passed two arguments so that this constructor gets invoked after creation of obj1 and obj2.
 
-public class Employee {
-
+public class Employee 
+{
    int empId;  
    String empName;  
 	    
    //parameterized constructor with two parameters
-   Employee(int id, String name){  
+   Employee(int id, String name)
+   {  
        this.empId = id;  
        this.empName = name;  
    }  
    void info(){
         System.out.println("Id: "+empId+" Name: "+empName);
-   }  
-	   
-   public static void main(String args[]){  
-	Employee obj1 = new Employee(10245,"Chaitanya");  
-	Employee obj2 = new Employee(92232,"Negan");  
+   }  	   
+   public static void main(String args[])
+   {  
+	Employee obj1 = new Employee(10245,"Ram");  
+	Employee obj2 = new Employee(92232,"Shyam");  
 	obj1.info();  
 	obj2.info();  
    }  
 }
+
 Output:
 
 Id: 10245 Name: Chaitanya
