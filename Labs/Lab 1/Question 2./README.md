@@ -3,18 +3,11 @@
 
 Mainly the following three basic operations are performed in the stack:
 
-Attention reader! Don’t stop learning now. Get hold of all the important DSA concepts with the DSA Self Paced Course at a student-friendly price and become industry ready.  To complete your preparation from learning a language to DS Algo and many more,  please refer Complete Interview Preparation Course.
-
-In case you wish to attend live classes with experts, please refer DSA Live Classes for Working Professionals and Competitive Programming Live for Students.
-
 Push: Adds an item in the stack. If the stack is full, then it is said to be an Overflow condition.
 Pop: Removes an item from the stack. The items are popped in the reversed order in which they are pushed. If the stack is empty, then it is said to be an Underflow condition.
 Peek or Top: Returns the top element of the stack.
 isEmpty: Returns true if the stack is empty, else false.
-
-
-
-
+isFull: Returns true if the stack is full, else false.
 
 **How to understand a stack practically?** 
 ->There are many real-life examples of a stack. Consider the simple example of plates stacked over one another in a canteen. The plate which is at the top is the first one to be removed, i.e. the plate which has been placed at the bottommost position remains in the stack for the longest period of time. So, it can be simply seen to follow the LIFO/FILO order.
