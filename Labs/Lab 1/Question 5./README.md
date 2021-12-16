@@ -38,3 +38,24 @@ Output: sonoo
        1
        3
        abc
+
+**Sum of Two Numbers Using Command Line Arguments in Java**
+->The command-line arguments are passed to the program at run-time. Passing command-line arguments in a Java program is quite easy. They are stored as strings in the String array passed to the args[] parameter of the main() method in Java.
+
+SumOfNumbers4.java
+
+public class SumOfNumbers4  
+{  
+public static void main(String args[])  
+{  
+int x = Integer.parseInt(args[0]); //first arguments   
+int y = Integer.parseInt(args[1]); //second arguments  
+int sum = x + y;  
+System.out.println("The sum of x and y is: " +sum);  
+}  
+}  
+Output:
+
+
+The sum of x and y is: 101
+First, compile the above program by using the command javac SumOfNumbers4.java. After that, run the program by using the command java SumOfNumbers4 89 12. Where 89 and 12 are command-line arguments.
