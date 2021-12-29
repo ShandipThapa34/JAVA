@@ -146,5 +146,3 @@ while ((len  = stream.read(buffer)) > 0) {
     bos.write(buffer, 0, len);
 }
 In the second while loop, we read the entries and write them to the output stream.
-
-In this tutorial, we have presented the Java ZipInputStream class. We have created two examples to read a ZIP file and to decompress a ZIP file.
