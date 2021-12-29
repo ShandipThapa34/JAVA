@@ -11,7 +11,6 @@ Each intermediate operation is lazily executed and returns a stream as a result,
 ## Different Operations On Streams-
 ### Intermediate Operations:
 * map: The map method is used to returns a stream consisting of the results of applying the given function to the elements of this stream.
-<div>
 List number = Arrays.asList(2,3,4,5);
 <div>
 List square = number.stream().map(x->x*x).collect(Collectors.toList());
