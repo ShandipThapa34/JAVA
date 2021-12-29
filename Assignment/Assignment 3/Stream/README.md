@@ -12,15 +12,12 @@ Each intermediate operation is lazily executed and returns a stream as a result,
 ### Intermediate Operations:
 * map: The map method is used to returns a stream consisting of the results of applying the given function to the elements of this stream.
 List number = Arrays.asList(2,3,4,5);
-<div>
 List square = number.stream().map(x->x*x).collect(Collectors.toList());
 * filter: The filter method is used to select elements as per the Predicate passed as argument.
 List names = Arrays.asList("Reflection","Collection","Stream");
-<div>
 List result = names.stream().filter(s->s.startsWith("S")).collect(Collectors.toList());
 * sorted: The sorted method is used to sort the stream.
 List names = Arrays.asList("Reflection","Collection","Stream");
-<div>
 List result = names.stream().sorted().collect(Collectors.toList());
 
 ### Terminal Operations:
