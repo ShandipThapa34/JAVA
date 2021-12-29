@@ -1,4 +1,4 @@
-### Stream In Java
+# Stream In Java
 
 Introduced in Java 8, the Stream API is used to process collections of objects. A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result.
 
@@ -9,9 +9,11 @@ Streams don’t change the original data structure, they only provide the result
 Each intermediate operation is lazily executed and returns a stream as a result, hence various intermediate operations can be pipelined. Terminal operations mark the end of the stream and return the result.
 
 ## Different Operations On Streams-
-# Intermediate Operations:
+### Intermediate Operations:
 * map: The map method is used to returns a stream consisting of the results of applying the given function to the elements of this stream.
+<div>
 List number = Arrays.asList(2,3,4,5);
+<div>
 List square = number.stream().map(x->x*x).collect(Collectors.toList());
 * filter: The filter method is used to select elements as per the Predicate passed as argument.
 List names = Arrays.asList("Reflection","Collection","Stream");
@@ -20,7 +22,7 @@ List result = names.stream().filter(s->s.startsWith("S")).collect(Collectors.toL
 List names = Arrays.asList("Reflection","Collection","Stream");
 List result = names.stream().sorted().collect(Collectors.toList());
 
-# Terminal Operations:
+### Terminal Operations:
 * collect: The collect method is used to return the result of the intermediate operations performed on the stream.
 List number = Arrays.asList(2,3,4,5,3);
 Set square = number.stream().map(x->x*x).collect(Collectors.toSet());
@@ -34,7 +36,7 @@ int even = number.stream().filter(x->x%2==0).reduce(0,(ans,i)-> ans+i);
 
 Here ans variable is assigned 0 as the initial value and i is added to it .
 
-# Program to demonstrate the use of Stream
+### Program to demonstrate the use of Stream
 //a simple program to demonstrate the use of stream in java
 import java.util.*;
 import java.util.stream.*;
