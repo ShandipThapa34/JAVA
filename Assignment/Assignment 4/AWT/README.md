@@ -49,14 +49,11 @@ The Panel is the container that doesn't contain title bar, border or menu bar. I
 The Frame is the container that contain title bar and border and can have menu bars. It can have other components like button, text field, scrollbar etc. Frame is most widely used container while developing an AWT application.
 
 ## Useful Methods of Component Class
-Method	Description
-public void add(Component c)	Inserts a component on this component.
-public void setSize(int width,int height)	Sets the size (width and height) of the component.
-public void setLayout(LayoutManager m)	Defines the layout manager for the component.
-public void setVisible(boolean status)	Changes the visibility of the component, by default false.
-Java AWT Example
-To create simple AWT example, you need a frame. There are two ways to create a GUI using Frame in AWT.
+1. public void add(Component c)	(Inserts a component on this component.)
+2. public void setSize(int width,int height)	(Sets the size (width and height) of the component.)
+3. public void setLayout(LayoutManager m)	(Defines the layout manager for the component.)
+4. public void setVisible(boolean status)	(Changes the visibility of the component, by default false.)
 
-
-By extending Frame class (inheritance)
-By creating the object of Frame class (association)
+There are two ways to create a GUI using Frame in AWT.
+1. By extending Frame class (inheritance)
+2. By creating the object of Frame class (association)
