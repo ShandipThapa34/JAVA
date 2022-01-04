@@ -6,15 +6,16 @@ The javax.swing package provides classes for java swing API such as JButton, JTe
 
 ## Difference between AWT and Swing
 There are many differences between java awt and swing that are given below.
-|No.|                   Java AWT                    |                    Java Swing                    |
-|---|----------------------------------------------:|-------------------------------------------------:|
-|1) | AWT components are platform-dependent.        | Java swing components are platform-independent.  |
-|2) | AWT components are heavyweight.               | Swing components are lightweight.                |
-|3) | AWT doesn't support pluggable look and feel.  | Swing supports pluggable look and feel.          |
-|4) | AWT provides less components than Swing.      | Swing provides more powerful components.         |
+|No.|                   Java AWT                  |                    Java Swing                  |
+|---|--------------------------------------------:|-----------------------------------------------:|
+|1) | AWT components are platform-dependent.      | Java swing components are platform-independent.|
+|2) | AWT components are heavyweight.             | Swing components are lightweight.              |
+|3) | AWT doesn't support pluggable look and feel.| Swing supports pluggable look and feel.        |
+|4) | AWT provides less components than Swing.    | Swing provides more powerful components.       |
 
 ## Hierarchy of Java Swing classes
 The hierarchy of java swing API is given below.
+
 ![Swing Hierarchy](https://static.javatpoint.com/images/swinghierarchy.jpg)
 
 ## Commonly used Methods of Component class
