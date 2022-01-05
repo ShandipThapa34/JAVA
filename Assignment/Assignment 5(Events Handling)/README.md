@@ -48,7 +48,7 @@ We can put the event handling code into one of the following places:
 3. Anonymous class
 
 ## Java event handling by implementing ActionListener
-```
+```java
 import java.awt.*;  
 import java.awt.event.*;  
 class AEvent extends Frame implements ActionListener{  
@@ -81,7 +81,7 @@ new AEvent();
 public void setBounds(int xaxis, int yaxis, int width, int height); have been used in the above example that sets the position of the component it may be button, textfield etc.
 
 ## 2) Java event handling by outer class
-``` 
+```java
 import java.awt.*;  
 import java.awt.event.*;  
 class AEvent2 extends Frame{  
@@ -117,7 +117,7 @@ obj.tf.setText("welcome");
 }  
 ```
 ## 3) Java event handling by anonymous class
-```
+```java
 import java.awt.*;  
 import java.awt.event.*;  
 class AEvent3 extends Frame{  
