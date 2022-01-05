@@ -17,17 +17,129 @@ The Delegation Event Model has the following key participants namely:
 
 The benefit of this approach is that the user interface logic is completely separated from the logic that generates the event. The user interface element is able to delegate the processing of an event to the separate piece of code. In this model ,Listener needs to be registered with the source object so that the listener can receive the event notification. This is an efficient way of handling the event because the event notifications are sent only to those listener that want to receive them.
 
-## Steps involved in event handling
-* The User clicks the button and the event is generated.
-* Now the object of concerned event class is created automatically and information about the source and the event get populated with in same object.
-* Event object is forwarded to the method of registered listener class.
-* the method is now get executed and returns.
+## Steps to perform Event Handling
+Following steps are required to perform event handling:
+1. Register the component with the Listener
 
-## Points to remember about listener
-* In order to design a listener class we have to develop some listener interfaces.These Listener interfaces forecast some public abstract callback methods which must be implemented by the listener class.
-* If you do not implement the any if the predefined interfaces then your class can not act as a listener class for a source object.
+## Registration Methods
+For registering the component with the Listener, many classes provide the registration methods. For example:
+1. Button
+  * public void addActionListener(ActionListener a){}
+2. MenuItem
+  * public void addActionListener(ActionListener a){}
+3. TextField
+  * public void addActionListener(ActionListener a){}
+  * public void addTextListener(TextListener a){}
+4. TextArea
+  *public void addTextListener(TextListener a){}
+5. Checkbox
+  *public void addItemListener(ItemListener a){}
+6. Choice
+  *public void addItemListener(ItemListener a){}
+7. List
+  *public void addActionListener(ActionListener a){}
+  *public void addItemListener(ItemListener a){}
+  
+## Java Event Handling Code
+We can put the event handling code into one of the following places:
 
-## Callback Methods
-These are the methods that are provided by API provider and are defined by the application programmer and invoked by the application developer. Here the callback methods represents an event method. In response to an event java jre will fire callback method. All such callback methods are provided in listener interfaces.
+1. Within class
+2. Other class
+3. Anonymous class
 
-If a component wants some listener will listen to it's events the the source must register itself to the listener.
+## Java event handling by implementing ActionListener
+```
+import java.awt.*;  
+import java.awt.event.*;  
+class AEvent extends Frame implements ActionListener{  
+TextField tf;  
+AEvent(){  
+  
+//create components  
+tf=new TextField();  
+tf.setBounds(60,50,170,20);  
+Button b=new Button("click me");  
+b.setBounds(100,120,80,30);  
+  
+//register listener  
+b.addActionListener(this);//passing current instance  
+  
+//add components and set size, layout and visibility  
+add(b);add(tf);  
+setSize(300,300);  
+setLayout(null);  
+setVisible(true);  
+}  
+public void actionPerformed(ActionEvent e){  
+tf.setText("Welcome");  
+}  
+public static void main(String args[]){  
+new AEvent();  
+}  
+}
+```
+public void setBounds(int xaxis, int yaxis, int width, int height); have been used in the above example that sets the position of the component it may be button, textfield etc.
+
+## 2) Java event handling by outer class
+``` 
+import java.awt.*;  
+import java.awt.event.*;  
+class AEvent2 extends Frame{  
+TextField tf;  
+AEvent2(){  
+//create components  
+tf=new TextField();  
+tf.setBounds(60,50,170,20);  
+Button b=new Button("click me");  
+b.setBounds(100,120,80,30);  
+//register listener  
+Outer o=new Outer(this);  
+b.addActionListener(o);//passing outer class instance  
+//add components and set size, layout and visibility  
+add(b);add(tf);  
+setSize(300,300);  
+setLayout(null);  
+setVisible(true);  
+}  
+public static void main(String args[]){  
+new AEvent2();  
+}  
+}  
+import java.awt.event.*;  
+class Outer implements ActionListener{  
+AEvent2 obj;  
+Outer(AEvent2 obj){  
+this.obj=obj;  
+}  
+public void actionPerformed(ActionEvent e){  
+obj.tf.setText("welcome");  
+}  
+}  
+```
+## 3) Java event handling by anonymous class
+```
+import java.awt.*;  
+import java.awt.event.*;  
+class AEvent3 extends Frame{  
+TextField tf;  
+AEvent3(){  
+tf=new TextField();  
+tf.setBounds(60,50,170,20);  
+Button b=new Button("click me");  
+b.setBounds(50,120,80,30);  
+  
+b.addActionListener(new ActionListener(){  
+public void actionPerformed(){  
+tf.setText("hello");  
+}  
+});  
+add(b);add(tf);  
+setSize(300,300);  
+setLayout(null);  
+setVisible(true);  
+}  
+public static void main(String args[]){  
+new AEvent3();  
+}  
+}  
+```
