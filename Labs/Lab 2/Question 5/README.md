@@ -8,8 +8,8 @@ import java.io.File
  
 // Specify the filename
 File obj = new File("filename.txt");
-Java uses the concept of a stream to make I/O operations on a file. So let’s now understand what is a Stream in Java.
 ```
+Java uses the concept of a stream to make I/O operations on a file. So let’s now understand what is a Stream in Java.
 
 ## What is a Stream?
 In Java, Stream is a sequence of data which can be of two types.
