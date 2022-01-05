@@ -29,13 +29,13 @@ There are mainly two types of exceptions: checked and unchecked. An error is con
 3. Error
 
 ## Difference between Checked and Unchecked Exceptions
-1) Checked Exception
+1) Checked Exception:
 The classes that directly inherit the Throwable class except RuntimeException and Error are known as checked exceptions. For example, IOException, SQLException, etc. Checked exceptions are checked at compile-time.
 
-2) Unchecked Exception
+2) Unchecked Exception:
 The classes that inherit the RuntimeException are known as unchecked exceptions. For example, ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException, etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.
 
-3) Error
+3) Error:
 Error is irrecoverable. Some example of errors are OutOfMemoryError, VirtualMachineError, AssertionError etc.
 
 
