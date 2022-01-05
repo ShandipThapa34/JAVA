@@ -1,3 +1,5 @@
+# ASSIGNMENT GIVEN: JAN 5, DEADLINE JAN 6
+
 ## What is an Event?
 Change in the state of an object is known as event i.e. event describes the change in state of source. Events are generated as result of user interaction with the graphical user interface components. For example, clicking on a button, moving the mouse, entering a character through keyboard,selecting an item from list, scrolling the page are the activities that causes an event to happen.
 
