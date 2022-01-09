@@ -43,4 +43,5 @@ public class MyApplet extends Applet
 ```
   
 Output of the above program is as follows:
+	
 ![Output Image](https://www.startertutorials.com/corejava/wp-content/uploads/2016/03/passing-parameters-to-applet.png)
