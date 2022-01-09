@@ -20,7 +20,7 @@ Applet life cycle has 5 methods. Methods are init(), start(), paint(), stop() an
 8. destroy() method
 9. paint() method
 10. All of the above methods are automatically called by the browser. We no need to call explicitly. Even though each method has its own specification to full fill the requirement as we discussed above.
-11. 11. Entire Applet Life Cycle
+11. Entire Applet Life Cycle
 
 Syntax:
 ```
