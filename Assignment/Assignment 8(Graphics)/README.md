@@ -1,3 +1,5 @@
+# ASSIGNMENT GIVEN: JAN 16, DEADLINE: JAN 17;
+
 # Commonly used methods of Graphics class:
 1. public abstract void drawString(String str, int x, int y): is used to draw the specified string.
 2. public void drawRect(int x, int y, int width, int height): draws a rectangle with the specified width and height.
