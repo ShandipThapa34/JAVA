@@ -44,7 +44,7 @@ To create the client application, we need to create the instance of Socket class
 Socket s=new Socket("localhost",6666);  
 ````
 File: MyServer.java
-```
+```java
 import java.io.*;  
 import java.net.*;  
 public class MyServer {  
