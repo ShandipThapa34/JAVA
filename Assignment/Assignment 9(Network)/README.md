@@ -15,20 +15,20 @@ A socket is simply an endpoint for communications between the machines. The Sock
 
 ### Important methods
 1. public InputStream getInputStream()
-  * returns the InputStream attached with this socket.
+   * returns the InputStream attached with this socket.
 2. public OutputStream getOutputStream()	
-  * returns the OutputStream attached with this socket.
+   * returns the OutputStream attached with this socket.
 3. public synchronized void close()	
-  * closes this socket
+   * closes this socket
   
 ## ServerSocket class
 The ServerSocket class can be used to create a server socket. This object is used to establish communication with the clients.
 
 ### Important methods
 1. public Socket accept()	
-  * returns the socket and establish a connection between server and client.
+   * returns the socket and establish a connection between server and client.
 3. public synchronized void close()	
-  * closes the server socket.
+   * closes the server socket.
 
 ## Example of Java Socket Programming
 ### Creating Server:
@@ -43,3 +43,46 @@ To create the client application, we need to create the instance of Socket class
 ```java
 Socket s=new Socket("localhost",6666);  
 ````
+File: MyServer.java
+```
+import java.io.*;  
+import java.net.*;  
+public class MyServer {  
+ public static void main(String[] args){  
+ try{  
+  ServerSocket ss=new ServerSocket(6666);  
+  Socket s=ss.accept();//establishes connection   
+  DataInputStream dis=new DataInputStream(s.getInputStream());  
+  String  str=(String)dis.readUTF();  
+  System.out.println("message= "+str);  
+  ss.close();  
+ }catch(Exception e)
+  {
+   System.out.println(e);
+  }  
+ }  
+}
+```
+
+File: MyClient.java
+```java
+import java.io.*;  
+import java.net.*;  
+public class MyClient {  
+ public static void main(String[] args) 
+ {  
+  try
+  {      
+   Socket s=new Socket("localhost",6666);  
+   DataOutputStream dout=new DataOutputStream(s.getOutputStream());  
+   dout.writeUTF("Hello Server");  
+   dout.flush();  
+   dout.close();  
+   s.close();  
+  }catch(Exception e)
+   {
+    System.out.println(e);
+   }  
+ }  
+}
+```
